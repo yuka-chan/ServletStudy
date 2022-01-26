@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>POST</title>
+</head>
+<body>
+	
+	<script src="//js.arcgis.com/4.1/"></script>
+	
+	<script>
+	require([
+		"dojo/request/xhr",
+		"dojo/ready"
+	], 
+	function(xhr,ready){	
+		ready(function(){
+			var option = {timeout : 30000,
+					      sync : false};
+		    xhr.post("http://localhost:8080/logout/Sample",option);
+		});
+	});
+	
+	/*	
+	window.onload = function() {
+		var request = new XMLHttpRequest();
+		request.open('POST', 'http://localhost:8080/logout/Sample', true);  // `false` で同期リクエストになる
+		request.timeout = 20000;
+		request.send(null);
+	
+		if (request.status === 200) {
+		  console.log(request.responseText);
+		}
+		
+		"http://ajax.googleapis.com/ajax/libs/dojo/1.7.2/dojo/dojo.js"
+	};*/
+	
+	</script>
+</body>
+</html>
