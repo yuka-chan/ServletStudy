@@ -35,7 +35,7 @@ public class fortune extends HttpServlet {
 		String[] results = {"super lucky","lucky","so so" ,"bad","so bad"};
 		
 		//do fortune
-		int index = (int)Math.random() * (results.length);	
+		int index = (int)(Math.random() * results.length);	
 		String result = results[index];
 		
 		//Date
